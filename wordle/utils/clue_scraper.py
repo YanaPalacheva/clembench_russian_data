@@ -64,7 +64,7 @@ def clean_text(text: str) -> str:
 
 
 def scrape_data() -> json:
-    data = []
+    data = {}
     page_number = 1
     looping = True
 
@@ -83,12 +83,11 @@ def scrape_data() -> json:
                 description = extract_description(word_html)
                 if description:
                     description = clean_text(description)
-                    data.append({word: description})
+                    data[word.lower()] = description
 
             page_number += 1
         else:
             looping = False
-
     return json.dumps(data, ensure_ascii=False, indent=4)
 
 
