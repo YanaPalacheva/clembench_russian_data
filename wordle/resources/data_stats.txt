@@ -1,0 +1,4 @@
+Total words: 2162
+High frequency: 720 words
+Medium frequency: 722 words.
+Low frequency: 720 words
