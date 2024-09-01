@@ -97,7 +97,7 @@ def parse_raw_data(filename: str) -> pd.DataFrame:
     df.rename(columns=COLUMN_MAP, inplace=True)
     df = df.dropna()
     df[["Lemma", "POS tag"]] = df["Lemma OpenCorpora"].apply(parse_lemma)
-    df.drop(columns=["Word", "Rank", "Frequency per Million", "Lemma OpenCorpora"], inplace=True)
+    df.drop(columns=["Word", "Rank", "Document Frequency", "Lemma OpenCorpora"], inplace=True)
     return df
 
 
@@ -128,7 +128,7 @@ def extract_words_frequencies(df: pd.DataFrame) -> pd.DataFrame:
     df_filtered = filter_by_pos(df)
 
     # group by lemma and aggregate frequencies of each entry
-    df_grouped = df_filtered.groupby('Lemma')['Document Frequency'].sum().reset_index()
+    df_grouped = df_filtered.groupby('Lemma')["Frequency per Million"].sum().reset_index()
 
     # save extracted words and frequencies as transitional state (due to time-consuming extraction)
     # df.to_json('df_taboo_full.json', orient='records', lines=True)
