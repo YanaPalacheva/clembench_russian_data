@@ -47,11 +47,11 @@ In the worst-case scenario you can compile this list manually.
 - **Sample:** Randomly sample a set number of words (e.g. 100 per frequency level) from each category.
 - **Review:**: Manually review the sampled words to ensure they do not include inappropriate or culturally irrelevant terms.
 
-- #### Step 6: Translate game prompts
+- #### Step 4: Translate game prompts
 Translate game prompts into the target language. 
 Google Translate does a pretty good job, if you don't speak the target language you can use it or ask for help from a (native) speaker.
 
-- #### Step 7: Create game instances for clembench
+- #### Step 5: Create game instances for clembench
 
 Now, you can run the benchmark :)
 
@@ -89,14 +89,14 @@ with the [RuWordNet Python wrapper]((https://github.com/avidale/python-ruwordnet
 
 The data preparation script can be found here: TODO
 
-### Step 6: Translate game prompts
+### Step 4: Translate game prompts
 
 Location: TODO
 
 Translate game prompts into the target language. 
 Google Translate does a pretty good job too, if you don't know the target language you can use it or ask for help of a (native) speaker.
 
-### Step 7: Create game instances for clembench
+### Step 5: Create game instances for clembench
 
 TODO
 
