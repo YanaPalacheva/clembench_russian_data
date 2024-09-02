@@ -191,15 +191,15 @@ def create_word_lists(df: pd.DataFrame):
     med_freq_100 = random.choices(df[one_third+1:two_thirds].index, k=100)
     low_freq_100 = random.choices(df[two_thirds+1:].index, k=100)
 
-    with open("../resources/low_freq_100.txt", "w") as o:
+    with open("../resources/low_freq_100.txt", "w", encoding='utf-8') as o:
         for w in df.loc[low_freq_100, "Lemma"]:
             o.write(f"{w}\n")
 
-    with open("../resources/medium_freq_100.txt", "w") as o:
+    with open("../resources/medium_freq_100.txt", "w", encoding='utf-8') as o:
         for w in df.loc[med_freq_100, "Lemma"]:
             o.write(f"{w}\n")
 
-    with open("../resources/high_freq_100.txt", "w") as o:
+    with open("../resources/high_freq_100.txt", "w", encoding='utf-8') as o:
         for w in list(df.loc[high_freq_100, "Lemma"]):
             o.write(f"{w}\n")
 
